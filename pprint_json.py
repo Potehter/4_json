@@ -6,8 +6,8 @@ def load_data(filepath):
     file_json = json.loads(f.read())
     return file_json
 
-def pretty_print_json(data):
-	print(json.dumps(data, sort_keys=True, indent=4, ensure_ascii=False))
+def pretty_print_json(text_json):
+	print(json.dumps(text_json, sort_keys=True, indent=4, ensure_ascii=False))
 
 def get_filepath():
 	return sys.argv[1]
