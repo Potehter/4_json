@@ -2,7 +2,7 @@ import json, sys
 
 
 def load_data(filepath):
-    f = open(filepath, 'r')
+    file_origin = open(filepath, 'r')
     file_json = json.loads(f.read())
     return file_json
 
@@ -14,8 +14,8 @@ def get_filepath():
 
 def main():
 	filepath = get_filepath()
-	data = load_data(filepath)
-	pretty_print_json(data)
+	text_json = load_data(filepath)
+	pretty_print_json(text_json)
 
 if __name__ == '__main__':
     main()
